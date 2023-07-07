@@ -15,7 +15,7 @@ from shiny import *
 # TODO: Change the shinyswatch theme to morph, cosmo, darkly, flatly, sketchy (or other shinyswatch theme)
 # Preview at https://bootswatch.com/
 app_ui = ui.page_navbar(
-    shinyswatch.theme.morph(),
+    shinyswatch.theme.superhero(),
     ui.nav(
         "Home",
         ui.layout_sidebar(
@@ -62,7 +62,7 @@ def server(input, output, session):
     @render.text
     def welcome_output():
         user = input.name_input();
-        welcome_string = f'Hello {user}!';
+        welcome_string = f'Howdy {user}!';
         return welcome_string
 
     @output
